@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "FDizfWdErG8XlNb3GYC2eQrl2ImSvWcaevzFw0fNLfz4ylaf1CMbJV9+xtxIhOUkyzIVo+4cONJVfH5paqCZMw==",
+  "dgSpecHash": "14doBU6WP7xSH6zEb7fUKB+vuILD5qsU8H0vSwCTyADbDhGcu1h6IfVd+6M45gR8eXVUXy20/uqMKQBDeSvm+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Дизайнер2\\source\\repos\\MovieTheatre\\MovieTheatre\\MovieTheatre.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Дизайнер2\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\Дизайнер2\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\Дизайнер2\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\Дизайнер2\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

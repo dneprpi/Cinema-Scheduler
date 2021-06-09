@@ -45,6 +45,8 @@ namespace MovieTheatre
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxSchedule = new System.Windows.Forms.TextBox();
             this.buttonGenerateSchedule = new System.Windows.Forms.Button();
+            this.buttonRandom = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxStartTime
@@ -114,7 +116,7 @@ namespace MovieTheatre
             // 
             // textBoxAllMovies
             // 
-            this.textBoxAllMovies.Location = new System.Drawing.Point(27, 273);
+            this.textBoxAllMovies.Location = new System.Drawing.Point(27, 259);
             this.textBoxAllMovies.Multiline = true;
             this.textBoxAllMovies.Name = "textBoxAllMovies";
             this.textBoxAllMovies.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -172,7 +174,7 @@ namespace MovieTheatre
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 255);
+            this.label7.Location = new System.Drawing.Point(28, 241);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 15);
             this.label7.TabIndex = 13;
@@ -184,13 +186,13 @@ namespace MovieTheatre
             this.textBoxSchedule.Multiline = true;
             this.textBoxSchedule.Name = "textBoxSchedule";
             this.textBoxSchedule.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxSchedule.Size = new System.Drawing.Size(467, 419);
+            this.textBoxSchedule.Size = new System.Drawing.Size(514, 434);
             this.textBoxSchedule.TabIndex = 14;
             this.textBoxSchedule.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // buttonGenerateSchedule
             // 
-            this.buttonGenerateSchedule.Location = new System.Drawing.Point(518, 55);
+            this.buttonGenerateSchedule.Location = new System.Drawing.Point(565, 55);
             this.buttonGenerateSchedule.Name = "buttonGenerateSchedule";
             this.buttonGenerateSchedule.Size = new System.Drawing.Size(214, 23);
             this.buttonGenerateSchedule.TabIndex = 15;
@@ -198,11 +200,33 @@ namespace MovieTheatre
             this.buttonGenerateSchedule.UseVisualStyleBackColor = true;
             this.buttonGenerateSchedule.Click += new System.EventHandler(this.buttonGenerateSchedule_Click);
             // 
+            // buttonRandom
+            // 
+            this.buttonRandom.Location = new System.Drawing.Point(27, 498);
+            this.buttonRandom.Name = "buttonRandom";
+            this.buttonRandom.Size = new System.Drawing.Size(75, 23);
+            this.buttonRandom.TabIndex = 16;
+            this.buttonRandom.Text = "Random";
+            this.buttonRandom.UseVisualStyleBackColor = true;
+            this.buttonRandom.Click += new System.EventHandler(this.buttonRandom_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(166, 498);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.TabIndex = 17;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // ScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 533);
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.buttonRandom);
             this.Controls.Add(this.buttonGenerateSchedule);
             this.Controls.Add(this.textBoxSchedule);
             this.Controls.Add(this.label7);
@@ -245,6 +269,8 @@ namespace MovieTheatre
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxSchedule;
         private System.Windows.Forms.Button buttonGenerateSchedule;
+        private System.Windows.Forms.Button buttonRandom;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }
 

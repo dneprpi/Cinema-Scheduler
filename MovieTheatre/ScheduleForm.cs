@@ -78,22 +78,19 @@ namespace MovieTheatre
         {
             Movie newMovie = new Movie(CurrentMovie.Name, CurrentMovie.Length);
             AllMovies.Add(newMovie);
-            textBoxAllMovies.Text += CurrentMovie.Name + ",   " + CurrentMovie.Length + " minutes;" + Environment.NewLine;
+            textBoxAllMovies.Text += CurrentMovie.Name + ",   " + CurrentMovie.Length + " min." + Environment.NewLine;
         }
 
         private void buttonGenerateSchedule_Click(object sender, EventArgs e)
         {
-            Scheduler.Movies = AllMovies;
-            Scheduler _scheduler = new Scheduler(WorkTime);
-            _scheduler.CreateGraph();
-            //string txt = _scheduler.WriteAllLeaves();
-            _schedule = _scheduler.CreateSchedule();
+            Scheduler.AllMovies = AllMovies;
+            Scheduler.WorkTime = WorkTime;
 
             textBoxSchedule.Text += "Schedule for today:" + Environment.NewLine;
             int movieStartTimeHours = StartTimeHours;
             int movieStartTimeMinutes = StartTimeMinutes;
-            //textBoxSchedule.Text += txt;
-            foreach (Movie m in _schedule.CurrentMovies)
+
+            foreach (Movie m in _schedule.Movies)
             {
                 int movieMinutes = m.Length;
                 int movieHours = 0;
@@ -113,7 +110,31 @@ namespace MovieTheatre
                 movieStartTimeHours = movieEndHours;
                 movieStartTimeMinutes = movieEndMinutes;
             }
-            buttonGenerateSchedule.BackColor = Color.Red;
+        }
+
+        private void buttonRandom_Click(object sender, EventArgs e)
+        {
+            textBoxAllMovies.Clear();
+            Movie Movie1 = new Movie("Lion King", 90);
+            Movie Movie2 = new Movie("Wizard of OZ", 80);
+            Movie Movie3 = new Movie("Mickey Mouse", 70);
+            AllMovies.Add(Movie1);
+            AllMovies.Add(Movie2);
+            AllMovies.Add(Movie3);
+            for (int i = 0; i < AllMovies.Count; ++i)
+            {
+                textBoxAllMovies.Text += AllMovies[i].Name + ", " + AllMovies[i].Length + " min." + Environment.NewLine;
+            }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            AllMovies.RemoveAt(AllMovies.Count-1);
+            textBoxAllMovies.Clear();
+            for (int i = 0; i < AllMovies.Count; ++i)
+            {
+                textBoxAllMovies.Text += AllMovies[i].Name + ", " + AllMovies[i].Length + " min." + Environment.NewLine;
+            }
         }
     }
 }
